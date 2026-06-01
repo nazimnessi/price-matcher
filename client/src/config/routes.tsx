@@ -1,17 +1,22 @@
-import { createBrowserRouter } from 'react-router-dom'
-import { LoginPage, RegisterPage } from '@/features/auth'
+import { createBrowserRouter } from "react-router-dom";
+import { LoginPage, RegisterPage } from "@/features/auth";
+import { GoldDashboard } from "@/features/gold/pages/GoldDashboard";
 
 export const router = createBrowserRouter([
   {
-    path: '/login',
+    path: "/login",
     element: <LoginPage />,
   },
   {
-    path: '/register',
+    path: "/register",
     element: <RegisterPage />,
   },
   {
-    path: '/',
-    element: <div>Home Page (Coming Soon)</div>,
+    path: "/",
+    element: <GoldDashboard />,
   },
-])
+  {
+    path: "/gold",
+    element: <GoldDashboard />,
+  },
+]);
